@@ -58,7 +58,7 @@ contract ZapRouter is IZapRouter {
         if (isCompoundToken[_to]) {
             target = ICToken(_to).underlying();
         }
-        if (isCompoundToken[_from]) {
+        if (isCompoundToken[_from] && source != target) {
             IERC20(_from).safeApprove(_from, 0);
             IERC20(_from).safeApprove(_from, amount);
             require(ICToken(_from).redeem(amount) == 0, "!redeem");
