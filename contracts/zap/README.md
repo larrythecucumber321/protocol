@@ -41,6 +41,7 @@ The demo at <a href="https://imzapping.in/#/issuance?token=0xc3ac2836FadAD8076bf
 | Chain ID | 31337 |
 | RPC URL | 3c28-2001-569-7bc0-ff00-29a5-9c29-85a3-11f8.ngrok.io |
 | Symbol | ETH |
+
 Thereafter, the demo can be used to interact with the zap functionality (where all transactions/transfers are inconsequential). Some latency can be expected when running the demo as it relies on connecting to locally running nodes on non-production hardware.
 
 ## Motivation
