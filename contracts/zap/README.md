@@ -1,17 +1,20 @@
 </br>
 <p style="text-align: center" align="center">
-  <a href="https://badger.com" target="_blank"><img src="https://i.imgur.com/jaz6Tr8.png" width="650" alt="eBTC logo"/></a>
+  <a href="https://badger.com" target="_blank"><img src="https://i.imgur.com/jaz6Tr8.png" width="80%" alt="eBTC logo"/></a>
 </p>
+
+  <div align="center" style="height:70%">
+    <img src="https://i.imgur.com/mJVsFnz.gif" />
+  </div>
 
 <div align="center">
   <div align="center">
-    <a href="">Example Application</a>
+    Demo: <a href="https://imzapping.in/#/issuance?token=0xc3ac2836FadAD8076bfB583150447a8629658591">ImZapping.In</a>
   </div>
+  
   <h6>Powered by Reserve Protocol, Curve, Aave, Compound</h6>
 </div>
-
 ## Installation
-
 To utilize the repository and run tests against the zap:
 
 ```bash
@@ -21,8 +24,7 @@ npx hardhat test test/zap/Zapper.test.ts
 
 ## Overview
 
-The Reserve Zap allows for entering any rToken positions supporting a wide array of assets.
-These include:
+The Reserve Zap allows for entering/exiting any rToken positions supporting a wide array of ERC20 assets, including:
 
 - Most stable coins available on Curve
 - WBTC
@@ -30,68 +32,84 @@ These include:
 - All Compound v2 markets
 - Select Static Aave markets
 
-Positions may enter and redeem to all base ERC20 tokens supported. 
+## Usage
 
-## Summary
+The demo at <a href="https://imzapping.in/#/issuance?token=0xc3ac2836FadAD8076bfB583150447a8629658591">ImZapping.In</a> requires connecting to a forked mainnet in MetaMask:
+| Variable | Value |
+|--------------|------------------------------------------------------|
+| Network Name | Forked ETH |
+| Chain ID | 31337 |
+| RPC URL | 3c28-2001-569-7bc0-ff00-29a5-9c29-85a3-11f8.ngrok.io |
+| Symbol | ETH |
+Thereafter, the demo can be used to interact with the zap functionality (where all transactions/transfers are inconsequential). Some latency can be expected when running the demo as it relies on connecting to locally running nodes on non-production hardware.
 
-The solution implements three main contracts to create a flexible zap framework with no off chain reliance.
+## Motivation
 
-- Zapper
-- ZapRouter
-- ZapRouterAdapater
-
-### Zapper
-
-The zapper is the entry point for the rToken zap.
-The goal of the zapper is to take a single input token amount and allow users to enter an rToken position in a single click.
-This should reduce the friction to entering an rToken position as currently multiple tokens may be required to utilize a position.
+The goal of the zapper is to allow users to enter/exit an rToken position in a single click and with a single token of interest, which significantly reduces the friction to entering and exiting an rToken position. Take for example the following scenarios:
 
 > Scenario 1
-> 
+>
 > **A user is interested in entering an RSV position. The user has onboarded Ethereum recently, and only owns Ethereum in their wallet.**
 
 The current mint flow for this position:
+
 - Purchase BUSD
 - Purchase USDC
-- Mint RSV 
+- Mint RSV
 
-This baseline example is not so bad.
-RSV, however, is a simple wrapper while the Reserve protocol supports much more flexible options.
-Increased complexitty decreases user experience by the nature of the baskets.
+This RSV baseline example is not so bad.
+The Reserve Protocol, however, supports much more flexible options, which can result in the user experience becoming increasingly complex.
 
 > Scenario 2
-> 
+>
 > **A user is interested in entering an Bogota Token position. The user has onboarded Ethereum recently, and only owns Ethereum in their wallet.**
-> 
 
 The current mint flow for this position:
+
 - Purchase DAI
 - Deposit DAI into Compound
 - Purchase USDC
 - Deposit USDC into Compound
 - Purchase USDT
 - Deposit USDT into Compound
-- Mint RSV 
+- Mint RSV
 
 Entering this position can be become inhibitive to user experience for more complex offerings.
-Utilizing the Reserve Zap allows for a one click enter into both scenarios above. 
+Utilizing the Reserve Zap allows for a one click enter into both scenarios above.
 
 > Scenario 3
-> 
+>
 > **A user is interested in entering an Bogota Token position. The user has onboarded Ethereum recently, and only owns Ethereum in their wallet. They utilize the Reserve Zap to enter their position.**
 
 The current mint flow for this position:
+
 - Wrap ETH to WETH
-- zapIn utilizing WETH for the Bogota Token
+- ⚡ `zapIn` utilizing WETH for the Bogota Token
+
+## Technical Highlights
+
+The solution implements three main contracts to create a flexible zap framework with no off-chain reliance.
+
+- [Zapper.sol](/contracts/zap/Zapper.sol)
+  - the external `zapIn` or `zapOut` functions serve as the entry point
+  - both invoke the router's `swap` function to make the appropriate conversions
+- [ZapRouter.sol](/contracts/zap/ZapRouter.sol)
+  - the router is a permissioned contract responsible for handling all swap logic on behalf of the zapper contract
+  - the current implementation relies on Curve to perform swaps between input, output, and/or collateral tokens (stablecoins and crypto assets are well supported with deep liquidity)
+- [ZapRouterAdapater.sol](/contracts/zap/interfaces/IRouterAdapter.sol)
+  - see below
 
 ## Extending Reserve Zap
 
-Additional support for other protocols would require adapters for their tokens.
-Currently tokens available are limited to those that may be resolved and swapper via the Curve router.
-Any routing updates would require a new router to be added for swap implementation.
-The new router can be registered with the zap by the Zap Manager.
+Currently tokens available are limited to those that may be resolved and swapped via the Curve router. However, through zap adaters, there is limitless flexibility to allow for any DeFi legos to be used in the zap framework. Router adapters are contracts that can be registered on the zap router to support activities specific to protocols.
 
-## Test Results
+Adapters have been written to provide zap support for all of Reserve Protocol's currently supported collaterals. The provided [Aave](/contracts/zap/StaticAaveRouterAdapter.sol) and [Compound](/contracts/zap/CompoundRouterAdapter.sol) adapters allow for depositing and withdrawing assets to/from these respective protocols. In Aave's case this additionally includes connecting to custom static wrapper contracts
+
+Routing updates require a new router to be registered with the zap router by the Zap Manager.
+
+## Appendix
+
+### Test Results from [Zapper.test.ts](test/zap/Zapper.test.ts)
 
 ```
 ┌─────────┬──────────────────┬─────────────┬──────────────────────────────┬──────────────┬──────────────┬────────────┐

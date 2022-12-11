@@ -12,10 +12,7 @@ async function main() {
   const [deployer] = await ethers.getSigners()
 
   const ZapRouterFactory = await ethers.getContractFactory('ZapRouter')
-  const zapRouter = await ZapRouterFactory.connect(deployer).deploy(
-    SUPPORTED_TOKENS,
-    MAX_TRADE_SLIPPAGE
-  )
+  const zapRouter = await ZapRouterFactory.connect(deployer).deploy(MAX_TRADE_SLIPPAGE)
   await zapRouter.deployed()
   console.log(`ZapRouter deployed to ${zapRouter.address}`)
 
