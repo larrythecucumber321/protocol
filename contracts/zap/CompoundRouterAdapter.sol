@@ -10,7 +10,7 @@ import { IRouterAdapter } from "./interfaces/IRouterAdapter.sol";
 
 /**
  * @title CompoundRouterAdapter
- * @notice Wraps and unwraps Compound tokens for use in ZapRouter
+ * @notice Wraps and unwraps Compound cTokens for use in ZapRouter
  */
 contract CompoundRouterAdapter is IRouterAdapter {
     using SafeERC20 for IERC20;
