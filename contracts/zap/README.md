@@ -35,7 +35,7 @@ The Reserve Zap allows for entering/exiting any rToken positions, supporting a w
 
 ## Demo Usage
 
-A UI supporting the Reserve Zap has been added to the Register frontend at https://github.com/lc-labs/register/pull/2.
+A UI supporting the Reserve Zap has been added to the Register frontend at https://github.com/lc-labs/register/pull/3.
 
 The demo at <a href="https://imzapping.in/#/issuance?token=0xc3ac2836FadAD8076bfB583150447a8629658591">ImZapping.In</a> requires connecting to a forked mainnet in MetaMask:
 | Variable | Value |
