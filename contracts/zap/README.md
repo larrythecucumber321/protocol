@@ -1,10 +1,10 @@
 </br>
-<p style="text-align: center" align="center">
-  <a href="https://badger.com" target="_blank"><img src="https://i.imgur.com/jaz6Tr8.png" width="80%" alt="eBTC logo"/></a>
-</p>
+  <p style="text-align: center" align="center">
+    <a href="https://imzapping.in/#/issuance?token=0xc3ac2836FadAD8076bfB583150447a8629658591" target="_blank"><img src="https://i.imgur.com/e0jwg5i.jpg" width="80%" alt="Reserve Zap Splash"/></a>
+  </p>
 
-  <div align="center" style="height:70%">
-    <img src="https://i.imgur.com/mJVsFnz.gif" />
+  <div align="center">
+    <img width="70%" src="https://i.imgur.com/6KUXaZ6.gif" />
   </div>
 
 <div align="center">
@@ -14,8 +14,9 @@
   
   <h6>Powered by Reserve Protocol, Curve, Aave, Compound</h6>
 </div>
+
 ## Installation
-To utilize the repository and run tests against the zap:
+To utilize the repository and run tests against the zap (`MAINNET_RPC_URL` must also first be set on `.env`:
 
 ```bash
 yarn install --frozen-lockfile
@@ -24,7 +25,7 @@ npx hardhat test test/zap/Zapper.test.ts
 
 ## Overview
 
-The Reserve Zap allows for entering/exiting any rToken positions supporting a wide array of ERC20 assets, including:
+The Reserve Zap allows for entering/exiting any rToken positions, supporting a wide array of ERC20 assets, including:
 
 - Most stable coins available on Curve
 - WBTC
@@ -32,14 +33,16 @@ The Reserve Zap allows for entering/exiting any rToken positions supporting a wi
 - All Compound v2 markets
 - Select Static Aave markets
 
-## Usage
+## Demo Usage
+
+A UI supporting the Reserve Zap has been added to the Register frontend at https://github.com/lc-labs/register/pull/2.
 
 The demo at <a href="https://imzapping.in/#/issuance?token=0xc3ac2836FadAD8076bfB583150447a8629658591">ImZapping.In</a> requires connecting to a forked mainnet in MetaMask:
 | Variable | Value |
 |--------------|------------------------------------------------------|
 | Network Name | Forked ETH |
-| Chain ID | 31337 |
 | RPC URL | https://b23e-2001-569-7bc0-ff00-bdc3-bda2-ba5b-afe0.ngrok.io |
+| Chain ID | 31337 |
 | Symbol | ETH |
 
 Thereafter, the demo can be used to interact with the zap functionality (where all transactions/transfers are inconsequential). Some latency can be expected when running the demo as it relies on connecting to locally running nodes on non-production hardware.
