@@ -41,7 +41,7 @@ The demo at <a href="https://imzapping.in/#/issuance?token=0xc3ac2836FadAD8076bf
 | Variable | Value |
 |--------------|------------------------------------------------------|
 | Network Name | Forked ETH |
-| RPC URL | https://b23e-2001-569-7bc0-ff00-bdc3-bda2-ba5b-afe0.ngrok.io |
+| RPC URL | https://d343-2001-569-7bc0-ff00-5c0d-1d4f-4d68-a9a0.ngrok.io |
 | Chain ID | 31337 |
 | Symbol | ETH |
 
