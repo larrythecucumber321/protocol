@@ -15,6 +15,12 @@ async function main() {
   const zapper = await ZapperFactory.connect(deployer).deploy(zapRouter.address)
   await zapper.deployed()
   console.log(`Zapper deployed to ${zapper.address}`)
+
+  const CompoundRouterAdapterFactory = await ethers.getContractFactory('CompoundRouterAdapter')
+  const compoundRouterAdapter = await CompoundRouterAdapterFactory.deploy()
+  await compoundRouterAdapter.deployed()
+  await zapRouter.registerAdapter(compoundRouterAdapter.address)
+  console.log(`CompoundRouterAdapter deployed to ${compoundRouterAdapter.address}`)
 }
 
 main().catch((error) => {
