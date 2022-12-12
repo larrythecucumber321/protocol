@@ -45,7 +45,7 @@ The demo at <a href="https://imzapping.in/#/issuance?token=0xc3ac2836FadAD8076bf
 | Chain ID | 31337 |
 | Symbol | ETH |
 
-Thereafter, the demo can be used to interact with the zap functionality (where all transactions/transfers are inconsequential). Some latency can be expected when running the demo as it relies on connecting to locally running nodes on non-production hardware.
+Thereafter, the demo can be used to interact with the zap functionality (where all transactions/transfers are inconsequential). When connecting to the app, MetaMask will prompt you to switch back to the ETH network - simply press **cancel** to continue with the demo. Some latency can be expected when running the demo as it relies on connecting to locally running nodes on non-production hardware.
 
 ## Motivation
 
