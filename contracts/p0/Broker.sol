@@ -69,7 +69,7 @@ contract BrokerP0 is ComponentP0, IBroker {
         // Apply Gnosis EasyAuction-specific resizing
         req = resizeTrade(req, GNOSIS_MAX_TOKENS);
 
-        req.sell.erc20().safeTransferFrom(caller, address(trade), req.sellAmount);
+        req.sell.erc20().transferFrom(caller, address(trade), req.sellAmount);
 
         trade.init(this, caller, gnosis, auctionLength, req);
         return trade;
@@ -84,11 +84,10 @@ contract BrokerP0 is ComponentP0, IBroker {
     }
 
     /// @param maxTokensAllowed {qTok} The max number of sell tokens allowed by the trading platform
-    function resizeTrade(TradeRequest memory req, uint256 maxTokensAllowed)
-        private
-        pure
-        returns (TradeRequest memory)
-    {
+    function resizeTrade(
+        TradeRequest memory req,
+        uint256 maxTokensAllowed
+    ) private pure returns (TradeRequest memory) {
         // {qTok}
         uint256 maxQuantity = (req.minBuyAmount > req.sellAmount)
             ? req.minBuyAmount
