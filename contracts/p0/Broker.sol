@@ -69,7 +69,7 @@ contract BrokerP0 is ComponentP0, IBroker {
         // Apply Gnosis EasyAuction-specific resizing
         req = resizeTrade(req, GNOSIS_MAX_TOKENS);
 
-        req.sell.erc20().safeTransferFrom(caller, address(trade), req.sellAmount);
+        req.sell.erc20().transferFrom(caller, address(trade), req.sellAmount);
 
         trade.init(this, caller, gnosis, auctionLength, req);
         return trade;
