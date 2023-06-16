@@ -84,11 +84,10 @@ contract BrokerP0 is ComponentP0, IBroker {
     }
 
     /// @param maxTokensAllowed {qTok} The max number of sell tokens allowed by the trading platform
-    function resizeTrade(TradeRequest memory req, uint256 maxTokensAllowed)
-        private
-        pure
-        returns (TradeRequest memory)
-    {
+    function resizeTrade(
+        TradeRequest memory req,
+        uint256 maxTokensAllowed
+    ) private pure returns (TradeRequest memory) {
         // {qTok}
         uint256 maxQuantity = (req.minBuyAmount > req.sellAmount)
             ? req.minBuyAmount
