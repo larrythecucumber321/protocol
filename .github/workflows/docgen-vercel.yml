@@ -1,0 +1,61 @@
+name: Generate and Deploy Forge Docs to Vercel
+
+on:
+  push:
+    branches:
+      - master
+
+  pull_request:
+    paths:
+      - contracts/**
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: npm
+
+      - name: Install Foundry
+        uses: onbjerg/foundry-toolchain@v1
+        with:
+          version: nightly
+
+      - name: Install Node dependencies
+        run: npm install --frozen-lockfile
+        shell: bash
+
+      - name: Setup Forge config
+        run: forge config --config-path foundry.toml
+        shell: bash
+
+      - name: Generate docs
+        run: forge doc --build
+        shell: bash
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
+      - name: Change working directory
+        run: vercel --cwd book --token=${{ env.VERCEL_TOKEN }}
+
+      - name: Pull vercel environment information
+        run: vercel pull --yes --environment=preview --token=${{ env.VERCEL_TOKEN }}
+
+      - name: Build artifacts
+        run: vercel build --token=${{ env.VERCEL_TOKEN }}
+
+      - name: Deploy artifacts to Vercel
+        run: vercel deploy --prebuilt --token=${{ env.VERCEL_TOKEN }}
