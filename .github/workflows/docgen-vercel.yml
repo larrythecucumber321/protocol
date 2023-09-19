@@ -38,7 +38,7 @@ jobs:
         shell: bash
 
       - name: Setup Forge config
-        run: forge config --config-path foundry.toml
+        run: forge config --config-path tools/docgen/foundry.toml
         shell: bash
 
       - name: Generate docs
@@ -49,4 +49,4 @@ jobs:
         run: npm install -g vercel
 
       - name: Change working directory
-        run: vercel --cwd book --yes --prod --token=${{ env.VERCEL_TOKEN }}
+        run: vercel --cwd tools/docgen/book --yes --prod --token=${{ env.VERCEL_TOKEN }}
