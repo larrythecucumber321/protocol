@@ -26,15 +26,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: npm
+          cache: yarn
 
       - name: Install Foundry
         uses: onbjerg/foundry-toolchain@v1
         with:
           version: nightly
 
-      - name: Install Node dependencies
-        run: npm install --frozen-lockfile
+      - name: Install node dependencies
+        run: yarn install --frozen-lockfile
         shell: bash
 
       - name: Setup Forge config
