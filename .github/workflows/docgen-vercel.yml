@@ -34,8 +34,8 @@ jobs:
           version: nightly
 
       - name: Install node dependencies
-        run: yarn install
-        shell: yarn
+        run: yarn install --verbose
+        shell: bash
 
       - name: Setup Forge config
         run: forge config --config-path foundry.toml
