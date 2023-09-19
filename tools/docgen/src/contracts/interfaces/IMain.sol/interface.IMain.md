@@ -1,5 +1,5 @@
 # IMain
-[Git Source](https://github.com/larrythecucumber321/protocol/blob/77d337b8595ba96d069ded321419b36a61984170/contracts/interfaces/IMain.sol)
+[Git Source](https://github.com/larrythecucumber321/protocol/blob/aabf2c9d4120808940fb3be9193cb66ea71ac351/contracts/interfaces/IMain.sol)
 
 **Inherits:**
 [IVersioned](/tools/docgen/src/contracts/interfaces/IVersioned.sol/interface.IVersioned.md), [IAuth](/tools/docgen/src/contracts/interfaces/IMain.sol/interface.IAuth.md), [IComponentRegistry](/tools/docgen/src/contracts/interfaces/IMain.sol/interface.IComponentRegistry.md)

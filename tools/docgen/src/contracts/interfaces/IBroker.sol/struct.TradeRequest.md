@@ -1,5 +1,5 @@
 # TradeRequest
-[Git Source](https://github.com/larrythecucumber321/protocol/blob/77d337b8595ba96d069ded321419b36a61984170/contracts/interfaces/IBroker.sol)
+[Git Source](https://github.com/larrythecucumber321/protocol/blob/aabf2c9d4120808940fb3be9193cb66ea71ac351/contracts/interfaces/IBroker.sol)
 
 The data format that describes a request for trade with the Broker
 

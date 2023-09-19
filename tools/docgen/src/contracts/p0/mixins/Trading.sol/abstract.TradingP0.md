@@ -1,5 +1,5 @@
 # TradingP0
-[Git Source](https://github.com/larrythecucumber321/protocol/blob/77d337b8595ba96d069ded321419b36a61984170/contracts/p0/mixins/Trading.sol)
+[Git Source](https://github.com/larrythecucumber321/protocol/blob/aabf2c9d4120808940fb3be9193cb66ea71ac351/contracts/p0/mixins/Trading.sol)
 
 **Inherits:**
 [RewardableP0](/tools/docgen/src/contracts/p0/mixins/Rewardable.sol/abstract.RewardableP0.md), [ITrading](/tools/docgen/src/contracts/interfaces/ITrading.sol/interface.ITrading.md)

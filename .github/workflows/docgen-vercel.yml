@@ -42,7 +42,7 @@ jobs:
         shell: bash
 
       - name: Generate docs
-        run: forge doc --build
+        run: forge doc --build --out tools/docgen
         shell: bash
 
       - name: Install Vercel CLI

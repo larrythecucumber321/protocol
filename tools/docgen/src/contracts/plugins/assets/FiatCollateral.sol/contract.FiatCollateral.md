@@ -1,5 +1,5 @@
 # FiatCollateral
-[Git Source](https://github.com/larrythecucumber321/protocol/blob/77d337b8595ba96d069ded321419b36a61984170/contracts/plugins/assets/FiatCollateral.sol)
+[Git Source](https://github.com/larrythecucumber321/protocol/blob/aabf2c9d4120808940fb3be9193cb66ea71ac351/contracts/plugins/assets/FiatCollateral.sol)
 
 **Inherits:**
 [ICollateral](/tools/docgen/src/contracts/interfaces/IAsset.sol/interface.ICollateral.md), [Asset](/tools/docgen/src/contracts/plugins/assets/Asset.sol/contract.Asset.md)

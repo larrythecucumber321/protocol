@@ -1,5 +1,5 @@
 # ERC1271Mock
-[Git Source](https://github.com/larrythecucumber321/protocol/blob/77d337b8595ba96d069ded321419b36a61984170/contracts/plugins/mocks/ERC1271Mock.sol)
+[Git Source](https://github.com/larrythecucumber321/protocol/blob/aabf2c9d4120808940fb3be9193cb66ea71ac351/contracts/plugins/mocks/ERC1271Mock.sol)
 
 Represents a simple smart contract wallet that provides approvals via ERC1271
 https://eips.ethereum.org/EIPS/eip-1271

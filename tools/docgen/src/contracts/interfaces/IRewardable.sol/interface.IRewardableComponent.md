@@ -1,5 +1,5 @@
 # IRewardableComponent
-[Git Source](https://github.com/larrythecucumber321/protocol/blob/77d337b8595ba96d069ded321419b36a61984170/contracts/interfaces/IRewardable.sol)
+[Git Source](https://github.com/larrythecucumber321/protocol/blob/aabf2c9d4120808940fb3be9193cb66ea71ac351/contracts/interfaces/IRewardable.sol)
 
 **Inherits:**
 [IRewardable](/tools/docgen/src/contracts/interfaces/IRewardable.sol/interface.IRewardable.md)
