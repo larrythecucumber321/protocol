@@ -34,7 +34,7 @@ jobs:
           version: nightly
 
       - name: Install node dependencies
-        run: yarn install --verbose
+        run: yarn install --immutable-cache
         shell: bash
 
       - name: Setup Forge config
