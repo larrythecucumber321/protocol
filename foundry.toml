@@ -1,7 +1,0 @@
-[profile.default]
-src=""
-
-[doc]
-out = ""
-book = "custom-book.toml"
-ignore = ["**/node_modules/**/*"]
