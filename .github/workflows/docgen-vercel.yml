@@ -33,6 +33,9 @@ jobs:
         with:
           version: nightly
 
+      - name: Clear Yarn cache
+        run: yarn cache clean
+
       - name: Install node dependencies
         run: yarn install --immutable-cache
         shell: bash
