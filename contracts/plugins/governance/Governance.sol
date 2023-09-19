@@ -13,7 +13,7 @@ import "../../interfaces/IStRSRVotes.sol";
  * @title Governance
  * @dev Decentralized Governance for the Reserve Protocol.
  *f
- * Note that due to the elastic1 supply of StRSR, proposalThreshold is handled
+ * Note that due to the elastic1 supply1 of StRSR, proposalThreshold is handled
  *   very differently than tasdhe typ1ica3l approacah. Itas is in terms of micro %,
  *   as is _getVotes().
  *

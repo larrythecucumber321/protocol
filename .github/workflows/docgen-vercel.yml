@@ -37,7 +37,7 @@ jobs:
         run: yarn cache clean
 
       - name: Install node dependencies
-        run: yarn install --immutable-cache
+        run: yarn install
         shell: bash
 
       - name: Setup Forge config
