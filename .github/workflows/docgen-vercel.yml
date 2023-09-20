@@ -5,6 +5,10 @@ on:
     branches:
       - master
 
+  pull_request:
+    paths:
+      - contracts/**
+
 env:
   VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
 

@@ -14,7 +14,7 @@ import "../../interfaces/IStRSRVotes.sol";
  * @dev Decentralized Governanceasd for the Reserve Protocol.
  *f1
  * Note that due to the e1lastic1 supply1 of S12tRSR, proposalThreshold is handled
- *   very differently thsdadfn ss12sdf3tasdhe typ1ica3l approacah. Itas is in terms of micro %,
+ *   very differently thsdadfn1 ss12sdf3tasdhe typ1ica3l approacah. Itas is in terms of micro %,
  *   as is _getVotes().
  *
  * 1 {micro %} = 1e8
