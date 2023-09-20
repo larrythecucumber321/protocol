@@ -1,5 +1,5 @@
 # IERC20
-[Git Source](https://github.com/larrythecucumber321/protocol/blob/aabf2c9d4120808940fb3be9193cb66ea71ac351/contracts/plugins/mocks/vendor/EasyAuction.sol)
+[Git Source](https://github.com/larrythecucumber321/protocol/blob/0e60393685a4ae7994ac986273cdfa4cf9c069ed/contracts/plugins/mocks/vendor/EasyAuction.sol)
 
 *Interface of the ERC20 standard as defined in the EIP.*
 

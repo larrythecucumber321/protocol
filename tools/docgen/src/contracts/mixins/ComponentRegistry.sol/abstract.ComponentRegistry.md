@@ -1,5 +1,5 @@
 # ComponentRegistry
-[Git Source](https://github.com/larrythecucumber321/protocol/blob/aabf2c9d4120808940fb3be9193cb66ea71ac351/contracts/mixins/ComponentRegistry.sol)
+[Git Source](https://github.com/larrythecucumber321/protocol/blob/0e60393685a4ae7994ac986273cdfa4cf9c069ed/contracts/mixins/ComponentRegistry.sol)
 
 **Inherits:**
 Initializable, [Auth](/tools/docgen/src/contracts/mixins/Auth.sol/abstract.Auth.md), [IComponentRegistry](/tools/docgen/src/contracts/interfaces/IMain.sol/interface.IComponentRegistry.md)

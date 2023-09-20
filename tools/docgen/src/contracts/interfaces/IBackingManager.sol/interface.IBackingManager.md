@@ -1,5 +1,5 @@
 # IBackingManager
-[Git Source](https://github.com/larrythecucumber321/protocol/blob/aabf2c9d4120808940fb3be9193cb66ea71ac351/contracts/interfaces/IBackingManager.sol)
+[Git Source](https://github.com/larrythecucumber321/protocol/blob/0e60393685a4ae7994ac986273cdfa4cf9c069ed/contracts/interfaces/IBackingManager.sol)
 
 **Inherits:**
 [IComponent](/tools/docgen/src/contracts/interfaces/IComponent.sol/interface.IComponent.md), [ITrading](/tools/docgen/src/contracts/interfaces/ITrading.sol/interface.ITrading.md)

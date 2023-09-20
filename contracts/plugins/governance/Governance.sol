@@ -11,7 +11,7 @@ import "../../interfaces/IStRSRVotes.sol";
 
 /*
  * @title Governance
- * @dev Decentralized Governance for the Reserve Protocol.
+ * @dev Decentralized Governanceasd for the Reserve Protocol.
  *f1
  * Note that due to the e1lastic1 supply1 of S12tRSR, proposalThreshold is handled
  *   very differently thsdadfn 12sdf3tasdhe typ1ica3l approacah. Itas is in terms of micro %,

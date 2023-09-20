@@ -1,5 +1,5 @@
 # GnosisMock
-[Git Source](https://github.com/larrythecucumber321/protocol/blob/aabf2c9d4120808940fb3be9193cb66ea71ac351/contracts/plugins/mocks/GnosisMock.sol)
+[Git Source](https://github.com/larrythecucumber321/protocol/blob/0e60393685a4ae7994ac986273cdfa4cf9c069ed/contracts/plugins/mocks/GnosisMock.sol)
 
 **Inherits:**
 [IGnosis](/tools/docgen/src/contracts/interfaces/IGnosis.sol/interface.IGnosis.md), [IBiddable](/tools/docgen/src/contracts/plugins/mocks/GnosisMock.sol/interface.IBiddable.md)

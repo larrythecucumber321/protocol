@@ -1,5 +1,5 @@
 # BackingManagerP0
-[Git Source](https://github.com/larrythecucumber321/protocol/blob/aabf2c9d4120808940fb3be9193cb66ea71ac351/contracts/p0/BackingManager.sol)
+[Git Source](https://github.com/larrythecucumber321/protocol/blob/0e60393685a4ae7994ac986273cdfa4cf9c069ed/contracts/p0/BackingManager.sol)
 
 **Inherits:**
 [TradingP0](/tools/docgen/src/contracts/p0/mixins/Trading.sol/abstract.TradingP0.md), [IBackingManager](/tools/docgen/src/contracts/interfaces/IBackingManager.sol/interface.IBackingManager.md)

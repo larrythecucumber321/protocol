@@ -1,5 +1,5 @@
 # CusdcV3Wrapper
-[Git Source](https://github.com/larrythecucumber321/protocol/blob/aabf2c9d4120808940fb3be9193cb66ea71ac351/contracts/plugins/assets/compoundv3/CusdcV3Wrapper.sol)
+[Git Source](https://github.com/larrythecucumber321/protocol/blob/0e60393685a4ae7994ac986273cdfa4cf9c069ed/contracts/plugins/assets/compoundv3/CusdcV3Wrapper.sol)
 
 **Inherits:**
 [ICusdcV3Wrapper](/tools/docgen/src/contracts/plugins/assets/compoundv3/ICusdcV3Wrapper.sol/interface.ICusdcV3Wrapper.md), [WrappedERC20](/tools/docgen/src/contracts/plugins/assets/compoundv3/WrappedERC20.sol/abstract.WrappedERC20.md), [CometHelpers](/tools/docgen/src/contracts/plugins/assets/compoundv3/CometHelpers.sol/contract.CometHelpers.md)

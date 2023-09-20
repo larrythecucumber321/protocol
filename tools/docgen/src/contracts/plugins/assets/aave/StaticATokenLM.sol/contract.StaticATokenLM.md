@@ -1,5 +1,5 @@
 # StaticATokenLM
-[Git Source](https://github.com/larrythecucumber321/protocol/blob/aabf2c9d4120808940fb3be9193cb66ea71ac351/contracts/plugins/assets/aave/StaticATokenLM.sol)
+[Git Source](https://github.com/larrythecucumber321/protocol/blob/0e60393685a4ae7994ac986273cdfa4cf9c069ed/contracts/plugins/assets/aave/StaticATokenLM.sol)
 
 **Inherits:**
 [ReentrancyGuard](/tools/docgen/src/contracts/plugins/assets/aave/ReentrancyGuard.sol/abstract.ReentrancyGuard.md), [ERC20](/tools/docgen/src/contracts/plugins/assets/aave/ERC20.sol/contract.ERC20.md), [IStaticATokenLM](/tools/docgen/src/contracts/plugins/assets/aave/IStaticATokenLM.sol/interface.IStaticATokenLM.md)
