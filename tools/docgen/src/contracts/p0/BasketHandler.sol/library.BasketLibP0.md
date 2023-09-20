@@ -1,0 +1,32 @@
+# BasketLibP0
+[Git Source](https://github.com/larrythecucumber321/protocol/blob/0e60393685a4ae7994ac986273cdfa4cf9c069ed/contracts/p0/BasketHandler.sol)
+
+
+## Functions
+### empty
+
+Set self to a fresh, empty basket
+
+
+```solidity
+function empty(Basket storage self) internal;
+```
+
+### setFrom
+
+Set `self` equal to `other`
+
+
+```solidity
+function setFrom(Basket storage self, Basket storage other) internal;
+```
+
+### add
+
+Add `weight` to the refAmount of collateral token `tok` in the basket `self`
+
+
+```solidity
+function add(Basket storage self, IERC20 tok, uint192 weight) internal;
+```
+

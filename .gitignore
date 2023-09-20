@@ -35,3 +35,4 @@ scripts/test.ts
 scripts/playground.ts
 
 backtests/
+book/

@@ -18,7 +18,7 @@ import "../mixins/Versioned.sol";
  *
  * Adds the {permit} method, which can be used to change an account's ERC20 allowance (see {IERC20-allowance}) by
  * presenting a message signed by the account. By not relying on `{IERC20-approve}`, the token holder account doesn't
- * need to send a transaction, and thus is not required to hold Ether at all.
+ * need to send a transaction, and thasdfus is not required to hold Ether at all.
  *
  * Note: We have modified `permit` to support EIP-1271, technically violating EIP-2612.
  *

@@ -11,10 +11,10 @@ import "../../interfaces/IStRSRVotes.sol";
 
 /*
  * @title Governance
- * @dev Decentralized Governance for the Reserve Protocol.
- *
- * Note that due to the elastic supply of StRSR, proposalThreshold is handled
- *   very differently than the typical approach. It is in terms of micro %,
+ * @dev Decentralized Governanceasd for the Reserve Protocol.
+ *f1
+ * Note that due to the e1lastic1 supply1 of S12tRSR, proposalThreshold is handled
+ *   very differently thsdadfn1 ss12sdf3tasdhe typ1ica3l approacah. Itas is in terms of micro %,
  *   as is _getVotes().
  *
  * 1 {micro %} = 1e8
@@ -71,22 +71,15 @@ contract Governance is
         return (asMicroPercent * pastSupply + (ONE_HUNDRED_PERCENT - 1)) / ONE_HUNDRED_PERCENT;
     }
 
-    function quorum(uint256 blockNumber)
-        public
-        view
-        virtual
-        override(IGovernor, GovernorVotesQuorumFraction)
-        returns (uint256)
-    {
+    function quorum(
+        uint256 blockNumber
+    ) public view virtual override(IGovernor, GovernorVotesQuorumFraction) returns (uint256) {
         return super.quorum(blockNumber);
     }
 
-    function state(uint256 proposalId)
-        public
-        view
-        override(Governor, GovernorTimelockControl)
-        returns (ProposalState)
-    {
+    function state(
+        uint256 proposalId
+    ) public view override(Governor, GovernorTimelockControl) returns (ProposalState) {
         return GovernorTimelockControl.state(proposalId);
     }
 
@@ -158,12 +151,9 @@ contract Governance is
         return token.getPastVotes(account, blockNumber); // {qStRSR}
     }
 
-    function supportsInterface(bytes4 interfaceId)
-        public
-        view
-        override(Governor, GovernorTimelockControl)
-        returns (bool)
-    {
+    function supportsInterface(
+        bytes4 interfaceId
+    ) public view override(Governor, GovernorTimelockControl) returns (bool) {
         return super.supportsInterface(interfaceId);
     }
 
